@@ -8,7 +8,7 @@ listener "tcp" {
 }
 
 ha_storage "consul" {
-  address = "consul.media.dev.usa.reachlocalservices.com:8500"
+  address = "localhost:8500"
   path    = "vault/"
   scheme  = "http"
   service = "vault"
