@@ -9,9 +9,10 @@ listener "tcp" {
 
 ha_storage "consul" {
   address = "localhost:8500"
-  path    = "vault/"
+  path    = "vault_ha_storage/"
   scheme  = "http"
   service = "vault"
+  service_tags = "tag1"
 }
 
 # HA settings
