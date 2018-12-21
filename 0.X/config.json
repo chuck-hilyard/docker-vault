@@ -1,0 +1,30 @@
+{
+	"file": {
+		"path": "/vault/file"
+	},
+	"ha_storage": {
+		"consul": {
+			"address": "localhost:8500",
+			"path": "vault/",
+			"scheme": "http",
+			"service": "vault"
+		}
+	},
+	"listener": [{
+		"tcp": {
+			"address": "0.0.0.0:8200",
+			"cluster_address": "0.0.0.0:8201",
+			"scheme": "http",
+			"tls_disable": 1
+		}
+	}],
+	"storage": {
+		"consul": {
+			"path": "vault/"
+		}
+	},
+	"default_lease_ttl": "168h",
+	"max_lease_ttl": "720h",
+	"disable_mlock": "false",
+	"ui": true
+}

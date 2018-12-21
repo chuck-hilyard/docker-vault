@@ -73,7 +73,7 @@ EXPOSE 8200
 # For production derivatives of this container, you shoud add the IPC_LOCK
 # capability so that Vault can mlock memory.
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-COPY config.hcl /vault/config/config.hcl
+#COPY config.hcl /vault/config/config.hcl
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 # By default you'll get a single-node development server that stores everything
